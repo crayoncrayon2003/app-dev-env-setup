@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- HTML5 文書であることを宣言 -->
+<html lang="ja">
+<head>
+    <!-- 文字コードを UTF-8 に設定（日本語を正しく表示するため） -->
+    <meta charset="UTF-8">
+
+    <!-- ブラウザのタブに表示されるタイトル -->
+    <title>Hello App</title>
+
+    <!-- CSSファイルを読み込む -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- アプリケーションのタイトル -->
+    <h1>Hello App</h1>
+
+    <!-- ボタン1: ヘルスチェック -->
+    <div class="section">
+        <h2>ボタン1: ヘルスチェック実行</h2>
+        <button onclick="healthCheck()">ヘルスチェック実行</button>
+        <div id="healthResult"></div>
+    </div>
+
+    <!-- ボタン2: ハローワールド -->
+    <div class="section">
+        <h2>ボタン2: ハローワールド実行</h2>
+        <button onclick="helloWorld()">ハローワールド実行</button>
+        <div id="helloResult"></div>
+    </div>
+
+    <!-- ボタン3-1, 3-2, 3-3: メッセージ操作 -->
+    <div class="section">
+        <h2>ボタン3: メッセージ操作</h2>
+        
+        <!-- ボタン3-1: msgにGET -->
+        <div class="msg-row">
+            <button onclick="getMessage()">msgにGET</button>
+            <div id="message">（まだメッセージを取得していません）</div>
+        </div>
+        
+        <!-- ボタン3-2: msgにPOST -->
+        <div class="msg-row">
+            <button onclick="sendMessage()">msgにPOST</button>
+            <input type="text" id="inputMessage" placeholder="送信するメッセージを入力">
+        </div>
+        
+        <!-- ボタン3-3: 表示をリセット -->
+        <div class="msg-row">
+            <button onclick="resetDisplay()">msgの表示をリセット</button>
+        </div>
+    </div>
+
+    <!-- JavaScript ファイルを読み込む -->
+    <!-- HTML の読み込み後に実行されるよう、body の最後に配置 -->
+    <script src="main.js"></script>
+</body>
+</html>
